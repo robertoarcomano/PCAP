@@ -1,4 +1,5 @@
 # hex, binary, conversions
+list1 = [0, 1]
 age_s = "47"
 age_d = int(age_s)
 age_h = 0x2F
@@ -18,14 +19,13 @@ for i in range(1, 3):
     print(i, end=" ")
 else:
     print(i)
+print("type(i) is int: ", str(type(i) is int))
 
 # logic
 a = 22
 b = 0
 c = 0
 print("(a or b) and (not c): " + str((a or b) and (not c)))
-
-# bitwise logic
 mask = 0b110000
 print("mask: " + str(mask) + " age_b & mask: " + str(age_b & mask))
 print("mask: " + str(mask) + " age_b | mask: " + str(age_b | mask))
@@ -79,5 +79,67 @@ try:
 except:
     print()
 
+# List Comprehensions
 print("[x**2 for x in range(5) if x % 2 == 0]: " + str([x**2 for x in range(5) if x % 2 == 0]))
 print("[[x**2 for x in range(5) if x % 2 == 0] for j in range(3)]: " + str([[x**2 for x in range(5) if x % 2 == 0] for j in range(3)]))
+
+# Tuples
+tuple1 = (1, 2, 3, 4)
+tuple2 = "a",
+for i in tuple1:
+    print("tuple1: ", i)
+
+for i in tuple2:
+    print("tuple2: ", i)
+
+print("tuple1 + tuple2: ", tuple1 + tuple2)
+print("tuple1 * 2: ", tuple1 * 2)
+
+# dictionaries
+dict1 = { "name": "Roberto", "age": 47}
+print("dict1: ", dict1)
+for key in sorted(dict1.keys()):
+    print("dict[", key, "]: ", dict1[key])
+for key, value in dict1.items():
+    print("key/value: ", key, value)
+for value in dict1.values():
+    print("value: ", value)
+dict1["name"] = "Frank"
+dict1["city"] = "Turin"
+for dict_value in dict1:
+    print("dict: ", dict_value, dict1[dict_value])
+print("del dict1[\"city\"]")
+del dict1["city"]
+for dict_value in dict1:
+    print("dict: ", dict_value, dict1[dict_value])
+print()
+
+
+# Functions
+def fn(p1, p2, p3, p4="perfect"):
+    print("p1: " + str(p1) + " p2: " + str(p2) + " p3: " + str(p3) + " p4: " + str(p4))
+    global age_s
+    print("global age_s that can be changed: " + age_s)
+    print("a defined from outside the function: " + str(a))
+    return "fn"
+
+
+print("fn(1, 2, 3): " + fn(1, 2, 3))
+fn(1, p3="ok", p4="what?", p2="now")
+
+none = None
+print("none: " + str(none))
+if none is None:
+    print("none is None")
+
+
+def fn1(list2):
+    print("list2 inside fn1: ", list2)
+    # list2 = [2, 3]
+    list2[0] = 4
+    print("list2 inside fn1: ", list2)
+    print("fn1")
+
+
+print("fn1: " + str(fn1(list1)))
+print("list1: ", list1)
