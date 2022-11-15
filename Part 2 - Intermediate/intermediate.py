@@ -10,6 +10,8 @@ from math import sin as sen, pi as py
 from random import random, seed, randrange, randint, choice, sample
 # Platform
 from platform import platform, machine, processor, system, version, python_implementation, python_version_tuple
+# Module
+import module
 
 # Dir
 print("dir(math):")
