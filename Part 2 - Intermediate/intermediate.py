@@ -10,6 +10,10 @@ from math import sin as sen, pi as py
 from random import random, seed, randrange, randint, choice, sample
 # Platform
 from platform import platform, machine, processor, system, version, python_implementation, python_version_tuple
+# Sys
+import sys
+sys.path.append("modules")
+import my_module
 
 # Dir
 print("dir(math):")
@@ -51,7 +55,6 @@ print("python_version_tuple(): ", python_version_tuple())
 print()
 
 # Module
-import my_module
 print("my_module.__counter:", my_module.__counter)
 list1 = [1, 2, 3]
 my_module.show_list(list1)
