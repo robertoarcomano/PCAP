@@ -12,9 +12,10 @@ from random import random, seed, randrange, randint, choice, sample
 from platform import platform, machine, processor, system, version, python_implementation, python_version_tuple
 # Sys
 import sys
-# sys.path.append("packages")
-from packages.package1 import my_module
-import packages.package2.package3.module_new as module_new
+# sys.path.append("packages.old")
+sys.path.append("packages1.zip")
+from package1 import my_module
+import package2.package3.module_new as module_new
 
 # Dir
 print("dir(math):")
