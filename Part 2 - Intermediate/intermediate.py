@@ -10,8 +10,6 @@ from math import sin as sen, pi as py
 from random import random, seed, randrange, randint, choice, sample
 # Platform
 from platform import platform, machine, processor, system, version, python_implementation, python_version_tuple
-# Module
-import module
 
 # Dir
 print("dir(math):")
@@ -40,6 +38,7 @@ print("randint(0,1): ", randint(0, 1))
 list1 = [x for x in range(10)]
 print("choice(list1): ", choice(list1))
 print("sample(list1, 3): ", sample(list1, 3))
+print()
 
 # HW
 print("platform(): ", platform())
@@ -49,3 +48,14 @@ print("system(): ", system())
 print("version(): ", version())
 print("python_implementation(): ", python_implementation())
 print("python_version_tuple(): ", python_version_tuple())
+print()
+
+# Module
+import my_module
+print("my_module.__counter:", my_module.__counter)
+list1 = [1, 2, 3]
+my_module.show_list(list1)
+print("my_module.__counter:", my_module.__counter)
+my_module.show_list(list1)
+print("my_module.__counter:", my_module.__counter)
+
