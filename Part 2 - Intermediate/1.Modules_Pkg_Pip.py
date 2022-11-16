@@ -12,8 +12,7 @@ from random import random, seed, randrange, randint, choice, sample
 from platform import platform, machine, processor, system, version, python_implementation, python_version_tuple
 # Sys
 import sys
-# sys.path.append("packages.old")
-sys.path.append("packages1.zip")
+sys.path.append("packages")
 from package1 import my_module
 import package2.package3.module_new as module_new
 
