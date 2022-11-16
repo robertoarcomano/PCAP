@@ -70,6 +70,18 @@ print("list_s1.sort()")
 print("list_n1:", list_n1)
 print("list_s1:", list_s1)
 
+try:
+    try:
+        c = 1 / 0
+    except ZeroDivisionError:
+        print("Managed error: division by 0")
+        raise
+except ArithmeticError:
+    print("Managed re-launched error")
 
+try:
+    assert 1 == 0
+except:
+    print("Obviously 1 is not equal to 0!")
 
-
+print("'m' > 'M':", 'm' > 'M')
