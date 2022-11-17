@@ -1,5 +1,6 @@
 from misc_modules import *
 import sys
+import os
 
 print("IterClass():", end=" ")
 for i in IterClass():
@@ -104,7 +105,7 @@ for line in open("/etc/hosts", "rt"):
 file.close()
 print()
 
-sys.stderr.write("Dummy Error message")
+sys.stderr.write("Dummy Error Test Message")
 
 header("write binary data file")
 data = bytearray(10)
@@ -134,3 +135,21 @@ for b in data:
     print(chr(b), end=" ")
 print()
 print()
+
+# OS
+print("os.uname():", os.uname())
+print("os.name:", os.name)
+print("os.listdir():", os.listdir())
+print("mkdir(\"./temp\"):", os.mkdir("./temp"))
+print("os.getcwd():", os.getcwd())
+print("os.chdir(\"./temp\"):", os.chdir("./temp"))
+print("os.getcwd():", os.getcwd())
+print("os.makedirs(\"1/2\"):", os.makedirs("1/2"))
+print("os.listdir():", os.listdir())
+
+print("os.removedirs(\"1/2\"):", os.removedirs("1/2"))
+print("os.listdir():", os.listdir())
+print("os.chdir(\"../\"):", os.chdir("../"))
+print("os.listdir():", os.listdir())
+print("os.rmdir(\"./temp\"):", os.rmdir("./temp"))
+print("os.listdir():", os.listdir())
