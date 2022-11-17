@@ -33,3 +33,15 @@ print("8 in powers_of_2(10):", 8 in powers_of_2(10))
 print("map(lambda x: 1/x, powers_of_2(10)): ", end=" ")
 for i in map(lambda x: 1/x, powers_of_2(10)):
     print(i, end=" ")
+print()
+
+print("filter(lambda x: x > 10, powers_of_2(10)): ", end=" ")
+for i in filter(lambda x: x > 10, powers_of_2(10)):
+    print(i, end=" ")
+print()
+
+power2 = power(2)
+power10 = power(10)
+print("power2(3):", power2(3))
+print("power10(3):", power10(3))
+

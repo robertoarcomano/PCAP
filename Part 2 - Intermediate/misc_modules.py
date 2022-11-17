@@ -25,3 +25,9 @@ def powers_of_2(n):
         yield 2**i
 
 
+def power(base):
+    base = base
+
+    def closure(power_n):
+        return base**power_n
+    return closure
