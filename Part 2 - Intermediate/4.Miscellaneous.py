@@ -1,4 +1,5 @@
 from misc_modules import *
+import sys
 
 print("IterClass():", end=" ")
 for i in IterClass():
@@ -103,4 +104,33 @@ for line in open("/etc/hosts", "rt"):
 file.close()
 print()
 
+sys.stderr.write("Dummy Error message")
 
+header("write binary data file")
+data = bytearray(10)
+for i in range(len(data)):
+    data[i] = ord('a') + i
+file = open("./filebin", "wb")
+file.write(data)
+file.close()
+print()
+
+header("read binary data file")
+data = bytearray(10)
+for i in range(len(data)):
+    data[i] = ord('a') + i
+file = open("./filebin", "rb")
+file.readinto(data)
+file.close()
+print("data read from binary file: ", data)
+print()
+
+header("read binary data easier file")
+file = open("./filebin", "rb")
+data = bytearray(file.read())
+file.close()
+print("data read from binary file easier: ", end="")
+for b in data:
+    print(chr(b), end=" ")
+print()
+print()

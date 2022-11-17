@@ -34,7 +34,7 @@ def power(base):
 
 
 def header(text):
-    line = "".join(["*" for x in range(50)])
+    line = "".join(["*" for x in range(len(text))])
     print(line)
     print(text)
     print(line)
