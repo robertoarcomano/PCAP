@@ -44,4 +44,63 @@ power2 = power(2)
 power10 = power(10)
 print("power2(3):", power2(3))
 print("power10(3):", power10(3))
+print()
+
+# File
+header("/etc/hosts read char after char using the read(1)")
+file = open("/etc/hosts", "rt")
+ch = file.read(1)
+count = 0
+while ch != "":
+    print(ch, end="")
+    ch = file.read(1)
+    count += 1
+file.close()
+print("total chars read: ", count)
+print()
+
+# File
+header("/etc/hosts read line after line using readline()")
+file = open("/etc/hosts", "rt")
+line = file.readline()
+count = 0
+while line != "":
+    print(count, line, end="")
+    line = file.readline()
+    count += 1
+file.close()
+print()
+
+count = 0
+header("/etc/hosts read at once using readlines()")
+file = open("/etc/hosts", "rt")
+lines = file.readlines()
+file.close()
+for line in lines:
+    print(count, line, end="")
+    count += 1
+print()
+
+header("/etc/hosts read at once using read()")
+file = open("/etc/hosts", "rt")
+text = file.read()
+file.close()
+print(text)
+print()
+
+header("/etc/hosts read iterating on open()")
+for line in open("/etc/hosts", "rt"):
+    print(line, end="")
+print()
+
+header("read /etc/hosts and write it to a new file indexing the lines")
+file = open("./file", "wt")
+lines = []
+count = 0
+for line in open("/etc/hosts", "rt"):
+    file.write(str(count) + " " + line)
+    count += 1
+file.close()
+print()
+
 

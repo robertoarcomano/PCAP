@@ -31,3 +31,10 @@ def power(base):
     def closure(power_n):
         return base**power_n
     return closure
+
+
+def header(text):
+    line = "".join(["*" for x in range(50)])
+    print(line)
+    print(text)
+    print(line)
