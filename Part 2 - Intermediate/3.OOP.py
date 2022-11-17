@@ -95,3 +95,6 @@ print("setattr(object2, \"_Base__name\", \"another name for object2\")")
 setattr(object2, "_Base__name", "another name for object2")
 print("getattr(object2, \"_Base__name\"):", getattr(object2, "_Base__name"))
 
+# TODO
+# self.args on exceptions
+
