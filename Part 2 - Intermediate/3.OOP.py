@@ -97,4 +97,5 @@ print("getattr(object2, \"_Base__name\"):", getattr(object2, "_Base__name"))
 
 # TODO
 # self.args on exceptions
+# step of range as well as randint...
 
