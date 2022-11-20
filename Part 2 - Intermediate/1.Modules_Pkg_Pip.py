@@ -33,6 +33,8 @@ print("ceil(1.3): ", ceil(1.3))
 print("trunc(1.3): ", trunc(1.3))
 print("pow(2,3): ", pow(2, 3))
 print("hypot(3,4): ", hypot(3, 4))
+print("hypot(2): ", hypot(2))
+print()
 print()
 
 # Random
