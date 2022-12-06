@@ -1,5 +1,5 @@
-import threading
-import time
+from threading import Thread
+from time import sleep
 import random
 
 
@@ -8,10 +8,10 @@ def fn(alpha=False):
     for i in range(9):
         string = chr(ord(start_ch) + i)
         print(string, end=" ")
-        time.sleep(random.random()/10)
+        sleep(random.random()/10)
 
 
-x = threading.Thread(target=fn)
-y = threading.Thread(target=fn, args={True})
+x = Thread(target=fn)
+y = Thread(target=fn, args={True})
 x.start()
 y.start()
